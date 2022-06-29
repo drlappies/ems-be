@@ -1,5 +1,5 @@
 ### Quick Start
-	start docker
+	//start docker
     make start-db
     yarn install
     yarn migrate:latest
