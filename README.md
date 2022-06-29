@@ -1,4 +1,4 @@
-### Quick Start
+
 	//start docker
     make start-db
     yarn install
