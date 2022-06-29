@@ -1,0 +1,34 @@
+{
+  "name": "ems-be",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "drlappies",
+  "license": "MIT",
+  "keywords": [],
+  "scripts": {
+    "start:local": "env-cmd -f .env.local nodemon -r esm index.js",
+    "migrate:latest": "env-cmd -f .env.local yarn knex migrate:latest",
+    "migrate:up": "env-cmd -f .env.local yarn knex migrate:up",
+    "migrate:down": "env-cmd -f .env.local yarn knex migrate:down",
+    "migrate:reset": "env-cmd -f .env.local yarn knex migrate:rollback --all",
+    "seed": "env-cmd -f .env.local yarn knex seed:run --esm"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "env-cmd": "^10.1.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.95.9",
+    "nodemon": "^2.0.12",
+    "pg": "^8.7.1",
+    "winston": "^3.7.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.2"
+  }
+}
